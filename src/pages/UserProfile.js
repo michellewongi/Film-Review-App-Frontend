@@ -2,8 +2,9 @@ import React from "react";
 import { MOCK_DATA } from "./Dashboard";
 import FilmCard from "../components/FilmCard";
 
-function UserProfile() {
+function UserProfile({ userInformation }) {
   // display all posts BY ONE USER
+  console.log({ userInformation });
   return (
     <div className="PageWrapper">
       <h1>User Name:</h1>
