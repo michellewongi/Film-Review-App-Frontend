@@ -10,7 +10,6 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
 
       const email = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
-
       const auth = getAuth();
 
       signInWithEmailAndPassword(auth, email, password)
@@ -20,7 +19,7 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
           setLoggedIn(true);
           setUserInformation({
             email: user.email,
-            displayName: user.displayName,
+            // displayName: user.displayName,
             uid: user.uid,
             accessToken: user.accessToken,
           });

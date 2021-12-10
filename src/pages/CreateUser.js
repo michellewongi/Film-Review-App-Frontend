@@ -10,10 +10,8 @@ function CreateUser({ setErrors, setLoggedIn, setUserInformation }) {
 
       const email = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
-      const displayName = e.currentTarget.displayName.value;
+      // const displayName = e.currentTarget.displayName.value;
       const auth = getAuth();
-
-      // TODO: hookup displayName to form
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in
@@ -21,7 +19,7 @@ function CreateUser({ setErrors, setLoggedIn, setUserInformation }) {
           setLoggedIn(true);
           setUserInformation({
             email: user.email,
-            displayName: user.displayName,
+            // displayName: user.displayName,
             uid: user.uid,
             accessToken: user.accessToken,
           });

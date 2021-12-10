@@ -15,6 +15,7 @@ import CreateUser from "./pages/CreateUser";
 import AddReview from "./pages/AddReview";
 import UserProfile from "./pages/UserProfile";
 import Post from "./pages/Post";
+import Search from "./pages/Search";
 import Header from "./components/Header";
 // Stylesheet
 import "./App.css";
@@ -110,7 +111,13 @@ function App() {
           />
           <Route
             path="/add-review"
-            element={loggedIn ? <AddReview /> : <Navigate to="/login" />}
+            element={
+              loggedIn ? (
+                <AddReview userInformation={userInformation} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
           />
           <Route
             path="/review/:id"
@@ -125,6 +132,10 @@ function App() {
                 <Navigate to="/login" />
               )
             }
+          />
+          <Route
+            path="/search"
+            element={loggedIn ? <Search /> : <Navigate to="/login" />}
           />
           <Route
             path="/"

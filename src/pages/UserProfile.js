@@ -1,6 +1,6 @@
 import React from "react";
 import { MOCK_DATA } from "./Dashboard";
-import FilmCard from "../components/FilmCard";
+import ReviewCard from "../components/ReviewCard";
 
 function UserProfile({ userInformation }) {
   // display all posts BY ONE USER
@@ -9,8 +9,8 @@ function UserProfile({ userInformation }) {
     <div className="PageWrapper">
       <h1>User Name:</h1>
       <h2>Posts</h2>
-      {MOCK_DATA.map((film, i) => (
-        <FilmCard film={film} key={i} />
+      {MOCK_DATA.map((post, i) => (
+        <ReviewCard post={post} key={i} />
       ))}
     </div>
   );
