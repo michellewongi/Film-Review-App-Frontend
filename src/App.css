@@ -60,3 +60,26 @@
   flex-basis: 50%;
   padding-left: 20px;
 }
+
+.FilmList {
+  float: right;
+  flex-direction: column;
+  margin-top: -4rem;
+  margin-bottom: 4rem;
+  max-width: 430px;
+}
+
+.FilmList img {
+  display: flex;
+  max-width: 230px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.fields {
+  margin-bottom: 4rem;
+}
+
+input {
+  margin-right: 2rem;
+}

@@ -5,14 +5,8 @@ function CreateUserForm({ signUpUser }) {
     <div className="Form">
       <h2>Create User Form</h2>
       <form onSubmit={(e) => signUpUser(e)}>
-        {/* <label htmlFor="displayName">User Name</label>
-        <input
-          type="text"
-          name="displayName"
-          placeholder="Enter your username"
-        /> */}
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" placeholder="Enter your email" />
+        <label htmlFor="userEmail">Email</label>
+        <input type="email" name="userEmail" placeholder="Enter your email" />
         <label htmlFor="password">Password</label>
         <input
           type="password"

@@ -15,7 +15,6 @@ function Header({ logout, loggedIn }) {
           {loggedIn && (
             <>
               <a href="/">Dashboard</a>
-              <a href="/search">Search</a>
               <a href="/user/:id">My Profile</a>
               <a href="/add-review">Add Review</a>
               <button onClick={() => logout()}>Log Out</button>

@@ -3,23 +3,21 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 // Components
 import CreateUserForm from "../components/CreateUserForm";
 
-function CreateUser({ setErrors, setLoggedIn, setUserInformation }) {
+function CreateUser({ setUserInformation, setErrors, setLoggedIn }) {
   const signUpUser = useCallback(
     (e) => {
       e.preventDefault();
 
-      const email = e.currentTarget.email.value;
+      const userEmail = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
-      // const displayName = e.currentTarget.displayName.value;
       const auth = getAuth();
-      createUserWithEmailAndPassword(auth, email, password)
+      createUserWithEmailAndPassword(auth, userEmail, password)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
           setLoggedIn(true);
           setUserInformation({
-            email: user.email,
-            // displayName: user.displayName,
+            userEmail: user.email,
             uid: user.uid,
             accessToken: user.accessToken,
           });

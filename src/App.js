@@ -15,10 +15,11 @@ import CreateUser from "./pages/CreateUser";
 import AddReview from "./pages/AddReview";
 import UserProfile from "./pages/UserProfile";
 import Post from "./pages/Post";
-import Search from "./pages/Search";
 import Header from "./components/Header";
 // Stylesheet
 import "./App.css";
+
+export const baseUrl = `https://young-retreat-88062.herokuapp.com`;
 
 function App() {
   // Track if user is logged in
@@ -54,7 +55,7 @@ function App() {
           setUserInformation({});
           setLoggedIn(false);
         }
-        // wheneevr state cxhanges setLoading to false
+        // whenever state cxhanges setLoading to false
         setLoading(false);
       });
     }
@@ -132,10 +133,6 @@ function App() {
                 <Navigate to="/login" />
               )
             }
-          />
-          <Route
-            path="/search"
-            element={loggedIn ? <Search /> : <Navigate to="/login" />}
           />
           <Route
             path="/"

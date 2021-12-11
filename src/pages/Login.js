@@ -8,18 +8,17 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
     (e) => {
       e.preventDefault();
 
-      const email = e.currentTarget.email.value;
+      const userEmail = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
       const auth = getAuth();
 
-      signInWithEmailAndPassword(auth, email, password)
+      signInWithEmailAndPassword(auth, userEmail, password)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
           setLoggedIn(true);
           setUserInformation({
-            email: user.email,
-            // displayName: user.displayName,
+            userEmail: user.email,
             uid: user.uid,
             accessToken: user.accessToken,
           });
