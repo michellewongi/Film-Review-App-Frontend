@@ -1,10 +1,10 @@
 const FirebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  apiKey: "AIzaSyATTG26QTFLwpOxQ3gKU9Bl0oIZvwPQqwE",
   authDomain: "final-project-bf93e.firebaseapp.com",
   projectId: "final-project-bf93e",
   storageBucket: "final-project-bf93e.appspot.com",
-  messagingSenderId: process.env.REACT_APP_MESSAGING_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  messagingSenderId: "1084742151259",
+  appId: "1:1084742151259:web:e46afb640a85c76561e37e",
 };
 
 export default FirebaseConfig;
