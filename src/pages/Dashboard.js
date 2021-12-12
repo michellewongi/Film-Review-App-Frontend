@@ -22,7 +22,7 @@ function Dashboard() {
   // display all review posts
   return (
     <div className="PageWrapper">
-      <h1>Dashboard</h1>
+      <h1 className="dashboard-heading">Dashboard</h1>
       {reviews.map((l, i) => (
         <ReviewCard post={l} key={i} />
       ))}

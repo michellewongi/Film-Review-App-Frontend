@@ -8,16 +8,22 @@ function CreateUser({ setUserInformation, setErrors, setLoggedIn }) {
     (e) => {
       e.preventDefault();
 
-      const userEmail = e.currentTarget.email.value;
+      const email = e.currentTarget.email.value;
       const password = e.currentTarget.password.value;
       const auth = getAuth();
-      createUserWithEmailAndPassword(auth, userEmail, password)
+
+      createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          user.updateProfile({
+            displayName: e.currentTarget.displayName.value,
+          });
+          user.reload();
           setLoggedIn(true);
           setUserInformation({
-            userEmail: user.email,
+            email: user.email,
+            displayName: user.displayName,
             uid: user.uid,
             accessToken: user.accessToken,
           });

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import ReviewCard from "../components/ReviewCard";
+import SingleReviewCard from "../components/SingleReviewCard";
 
 const url =
   process.env.REACT_APP_BACKEND_URL ||
@@ -17,8 +17,9 @@ function Post() {
     axios
       .get(`${url}/review/${id}`)
       .then(function (response) {
-        console.log(response.data);
         setSingleReview(response.data);
+        console.log(singleReview);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.warn(error);
@@ -27,8 +28,8 @@ function Post() {
 
   return (
     <div className="PageWrapper">
-      <h1>Post</h1>
-      <ReviewCard post={singleReview} />
+      <h1 className="post-header">Post</h1>
+      <SingleReviewCard post={singleReview} />
     </div>
   );
 }

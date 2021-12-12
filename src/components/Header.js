@@ -1,10 +1,9 @@
 import React from "react";
 
-function Header({ logout, loggedIn }) {
+function Header({ logout, loggedIn, userInformation }) {
   return (
     <header className="HeaderWrapper">
       <div className="Header PageWrapper">
-        <h1>Film Site</h1>
         <nav>
           {!loggedIn && (
             <>
@@ -15,7 +14,7 @@ function Header({ logout, loggedIn }) {
           {loggedIn && (
             <>
               <a href="/">Dashboard</a>
-              <a href="/user/:id">My Profile</a>
+              <a href={`/user/${userInformation.uid}`}>My Profile</a>
               <a href="/add-review">Add Review</a>
               <button onClick={() => logout()}>Log Out</button>
             </>

@@ -4,16 +4,26 @@ import { useNavigate } from "react-router-dom";
 import AddReviewForm from "../components/AddReviewForm";
 import FilmCard from "../components/FilmCard";
 
-const baseUrl = process.env.REACT_APP_BACKEND_URL || `http://localhost:4000`;
+const baseUrl =
+  process.env.REACT_APP_BACKEND_URL ||
+  `https://young-retreat-88062.herokuapp.com` ||
+  `http://localhost:4000`;
 
 function AddReview({ userInformation }) {
   const [title, setTitle] = useState();
+  const [titleName, setTitleName] = useState();
 
-  const titleURL = "https://ghibliapi.herokuapp.com/films";
+  const apiKey = "k_69xwbh1e";
+
+  const titleURL = `https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleName}`;
 
   function setFilm() {
     if (!title) return <></>;
-    return (document.getElementById("imageSrc").value = title[0].image);
+    return (document.getElementById("imageSrc").value = title.results[0].image);
+  }
+
+  function handleChange(e) {
+    setTitleName(e.target.value);
   }
 
   const getFilm = () => {
@@ -55,8 +65,9 @@ function AddReview({ userInformation }) {
       <div className="fields">
         <input
           type="text"
+          onChange={handleChange}
           placeholder="Name of film"
-          onKeyUp={(e) => {
+          onKeyDown={(e) => {
             if (e.key === "Enter") {
               getFilm();
             }
@@ -66,13 +77,12 @@ function AddReview({ userInformation }) {
           className="searchBtn"
           onClick={() => {
             getFilm();
-            setFilm();
           }}
         >
           Search
         </button>
       </div>
-      <FilmCard film={title} />
+      <FilmCard film={title} onClick={setFilm()} />
       <AddReviewForm submitReview={submitReview} />
     </div>
   );

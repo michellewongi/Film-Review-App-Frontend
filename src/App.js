@@ -79,7 +79,11 @@ function App() {
 
   return (
     <div>
-      <Header logout={logout} loggedIn={loggedIn} />
+      <Header
+        logout={logout}
+        loggedIn={loggedIn}
+        userInformation={userInformation}
+      />
       <Router>
         <Routes>
           <Route
@@ -125,7 +129,7 @@ function App() {
             element={loggedIn ? <Post /> : <Navigate to="/login" />}
           />
           <Route
-            path="/user/:id"
+            path="/user/:uid"
             element={
               loggedIn ? (
                 <UserProfile userInformation={userInformation} />
