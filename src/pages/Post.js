@@ -24,7 +24,7 @@ function Post() {
       .catch(function (error) {
         console.warn(error);
       });
-  }, [id]);
+  }, [id, singleReview]);
 
   return (
     <div className="PageWrapper">

@@ -28,7 +28,7 @@ function UserProfile({ userInformation }) {
     if (!userReview) {
       loadData();
     }
-  }, [uid]);
+  }, [uid, userReview]);
 
   // display all posts BY ONE USER
   return (

@@ -5,7 +5,7 @@ function FilmCard({ film }) {
   return (
     <>
       <button className="FilmList">
-        <img src={film.results[0].image} />
+        <img alt="Movie Posters" src={film.results[0].image} />
         <h2>{film.results[0].title}</h2>
         <p>{film.results[0].description}</p>
       </button>
