@@ -17,11 +17,6 @@ function AddReview({ userInformation }) {
 
   const titleURL = `https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleName}`;
 
-  // function setFilm() {
-  //   if (!title) return <></>;
-  //   return (document.getElementById("imageSrc").value = title.results[0].image);
-  // }
-
   function handleChange(e) {
     setTitleName(e.target.value);
   }
@@ -64,6 +59,7 @@ function AddReview({ userInformation }) {
       <h2>Search</h2>
       <div className="fields">
         <input
+          className="search-bar"
           type="text"
           onChange={handleChange}
           placeholder="Name of film"
@@ -82,8 +78,10 @@ function AddReview({ userInformation }) {
           Search
         </button>
       </div>
-      <FilmCard film={title} />
-      <AddReviewForm submitReview={submitReview} />
+      <div className="ReviewPage">
+        <FilmCard film={title} />
+        <AddReviewForm submitReview={submitReview} />
+      </div>
     </div>
   );
 }
