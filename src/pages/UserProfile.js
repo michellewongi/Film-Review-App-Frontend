@@ -10,6 +10,7 @@ const url =
 
 function UserProfile({ userInformation }) {
   const [userReview, setUserReview] = useState();
+  const [currentProfile, setCurrentProfile] = useState();
   console.log(userInformation);
 
   let { uid } = useParams();
@@ -20,6 +21,7 @@ function UserProfile({ userInformation }) {
         .get(`${url}/user/${uid}`)
         .then(function (response) {
           setUserReview(response.data);
+          setCurrentProfile(response.data.posts[0].displayName);
         })
         .catch(function (error) {
           console.warn(error);
@@ -28,14 +30,18 @@ function UserProfile({ userInformation }) {
     if (!userReview) {
       loadData();
     }
-  }, [uid, userReview]);
+  }, [uid, userReview, currentProfile]);
 
   // display all posts BY ONE USER
   return (
     <div className="PageWrapper">
-      <p className="username">
-        <strong>User: </strong> {userInformation.email}
-      </p>
+      <div className="username">
+        <strong>User: </strong>{" "}
+        <p className="postedBy">
+          {" "}
+          {currentProfile ? currentProfile : userInformation.displayName}
+        </p>
+      </div>
       {userReview && <UserCard user={userReview} />}
     </div>
   );

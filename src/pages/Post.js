@@ -18,8 +18,6 @@ function Post() {
       .get(`${url}/review/${id}`)
       .then(function (response) {
         setSingleReview(response.data);
-        console.log(singleReview);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.warn(error);

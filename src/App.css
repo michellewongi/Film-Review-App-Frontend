@@ -17,6 +17,12 @@ h2 {
   text-align: center;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .PageWrapper {
   align-items: center;
   display: flex;
@@ -94,9 +100,13 @@ h2 {
   width: 100px;
 }
 
+.postedBy {
+  color: #bf218b;
+}
+
 .PostCard {
   align-items: center;
-  background-color: white;
+  background-color: #fadbe0;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -124,9 +134,12 @@ h2 {
   flex-basis: 50%;
   padding-left: 20px;
   padding-bottom: 1rem;
+  max-width: 400px;
+  width: 200px;
 }
 
-.background-card {
+.background-card,
+.background-card-user {
   background-image: url(design-elements/pngwing.png);
   background-size: 100%;
   border: 1px solid black;
@@ -138,8 +151,22 @@ h2 {
   width: 290px;
 }
 
+.background-card-user {
+  height: calc(500px - 120px);
+}
+
 .background-card:last-child {
   margin-bottom: 6rem;
+}
+
+.username {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.username strong {
+  margin-right: 10px;
 }
 
 .dashboard-heading,
@@ -154,10 +181,11 @@ h2 {
 }
 
 .FilmList {
+  align-items: center;
+  display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
-  max-width: 500px;
-  min-width: 300px;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
 
 .FilmList img {
@@ -166,6 +194,7 @@ h2 {
   margin: 0 auto;
   padding: 2rem 2rem 0;
   justify-content: center;
+  width: 190px;
 }
 
 .FilmList p {
@@ -174,4 +203,28 @@ h2 {
 
 input {
   margin-right: 2rem;
+}
+
+.singleFilmCards {
+  background-color: #fadbe0;
+  border: 1px solid black;
+  margin: 0 auto 30px;
+  max-height: 500px;
+  width: 290px;
+}
+
+.film-wrapper {
+  padding: 0.8rem 0;
+  margin: 0 auto;
+  width: 260px;
+}
+
+@media only screen and (min-width: 850px) {
+  .reviews {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 520px);
+    justify-items: center;
+    margin-top: 2rem;
+  }
 }

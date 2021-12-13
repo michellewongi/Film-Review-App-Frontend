@@ -5,8 +5,8 @@ function LoginForm({ loginUser }) {
     <div className="Form">
       <h2>Login Form</h2>
       <form onSubmit={(e) => loginUser(e)}>
-        <label htmlFor="userEmail">Email</label>
-        <input type="email" name="userEmail" placeholder="Enter your email" />
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" placeholder="Enter your email" />
 
         <label htmlFor="password">Password</label>
         <input

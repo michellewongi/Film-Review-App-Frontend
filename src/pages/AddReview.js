@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import AddReviewForm from "../components/AddReviewForm";
 import FilmCard from "../components/FilmCard";
 
@@ -17,10 +17,10 @@ function AddReview({ userInformation }) {
 
   const titleURL = `https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleName}`;
 
-  function setFilm() {
-    if (!title) return <></>;
-    return (document.getElementById("imageSrc").value = title.results[0].image);
-  }
+  // function setFilm() {
+  //   if (!title) return <></>;
+  //   return (document.getElementById("imageSrc").value = title.results[0].image);
+  // }
 
   function handleChange(e) {
     setTitleName(e.target.value);
@@ -44,10 +44,10 @@ function AddReview({ userInformation }) {
 
     const postMessage = e.currentTarget.postMessage.value;
     const imageSrc = e.currentTarget.imageSrc.value;
+    const displayName = userInformation.displayName;
     const userId = userInformation.uid;
-    const userEmail = userInformation.email;
 
-    const url = `${baseUrl}/create?postMessage=${postMessage}&imageSrc=${imageSrc}&userId=${userId}&userEmail=${userEmail}`;
+    const url = `${baseUrl}/create?postMessage=${postMessage}&imageSrc=${imageSrc}&userId=${userId}&displayName=${displayName}`;
 
     axios
       .get(url)
@@ -82,7 +82,7 @@ function AddReview({ userInformation }) {
           Search
         </button>
       </div>
-      <FilmCard film={title} onClick={setFilm()} />
+      <FilmCard film={title} />
       <AddReviewForm submitReview={submitReview} />
     </div>
   );

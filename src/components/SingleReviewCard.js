@@ -1,9 +1,6 @@
 import React from "react";
 
 function SingleReviewCard({ post }) {
-  // let displayName = `${post.userEmail}`;
-  // displayName = displayName.slice(0, displayName.lastIndexOf("@"));
-
   return (
     <div className="background-card">
       <div className="PostCard">
@@ -12,9 +9,12 @@ function SingleReviewCard({ post }) {
         </div>
         <div className="PostCardText">
           <p>{post.postMessage}</p>
-          {/* <p>
-            Posted by: <a href={`/user/${post.userId}`}>{displayName}</a>
-          </p> */}
+          <p>
+            Posted by:{" "}
+            <a className="postedBy" href={`/user/${post.userId}`}>
+              {post.displayName}
+            </a>
+          </p>
         </div>
       </div>
     </div>

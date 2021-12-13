@@ -11,7 +11,6 @@ function Dashboard() {
     axios
       .get(baseUrl)
       .then(function (response) {
-        console.log(response.data);
         setReviews(response.data);
       })
       .catch(function (error) {
@@ -23,9 +22,11 @@ function Dashboard() {
   return (
     <div className="PageWrapper">
       <h1 className="dashboard-heading">Dashboard</h1>
-      {reviews.map((l, i) => (
-        <ReviewCard post={l} key={i} />
-      ))}
+      <div className="reviews">
+        {reviews.map((l, i) => (
+          <ReviewCard post={l} key={i} />
+        ))}
+      </div>
     </div>
   );
 }

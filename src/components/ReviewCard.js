@@ -1,11 +1,9 @@
 import React from "react";
 
 function ReviewCard({ post }) {
-  // let displayName = `${post.userEmail}`;
-  // displayName = displayName.slice(0, displayName.lastIndexOf("@"));
-
+  // add a function that adds ... if more than x characters
   let previewText = `${post.postMessage}`;
-  previewText = previewText.slice(0, 45) + "...";
+  previewText = previewText.slice(0, 45);
 
   return (
     <div className="background-card">
@@ -15,9 +13,12 @@ function ReviewCard({ post }) {
         </div>
         <div className="PostCardText">
           <p>{previewText}</p>
-          {/* <p>
-            Posted by: <a href={`/user/${post.userId}`}>{displayName}</a>
-          </p> */}
+          <p>
+            Posted by:{" "}
+            <a className="postedBy" href={`/user/${post.userId}`}>
+              {post.displayName}
+            </a>
+          </p>
           <p className="view-post">
             <a href={`/review/${post.id}`}>View Post </a>
           </p>
