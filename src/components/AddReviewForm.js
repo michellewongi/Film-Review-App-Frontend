@@ -8,7 +8,7 @@ function AddReviewForm({ submitReview }) {
         <label htmlFor="imageSrc">Image Src</label>
         <input type="text" name="imageSrc" id="imageSrc" />
         <label htmlFor="postMessage">Post Message</label>
-        <input type="text" name="postMessage" placeholder="Enter your review" />
+        <textarea name="postMessage" placeholder="Enter your review" rows="7" />
         <button type="submit">Create Post</button>
       </form>
     </div>

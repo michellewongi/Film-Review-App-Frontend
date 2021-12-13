@@ -8,7 +8,8 @@
   src: url(design-elements/Latin-Modern-Mono/lmmonoproplt10-bold.otf);
 }
 
-body {
+body,
+html {
   font-family: Latin-Modern-Mono;
   margin-bottom: 5rem;
 }
@@ -28,7 +29,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem auto;
+  margin: 1rem auto 10rem;
   max-width: 1140px;
   padding-left: 25px;
   padding-right: 25px;
@@ -110,7 +111,7 @@ a {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  margin: 20px auto 0;
+  margin: 20px auto;
   max-height: 500px;
   padding: 15px 10px;
   position: relative;
@@ -127,15 +128,16 @@ a {
 .PostCardImage img {
   padding-top: 1rem;
   max-width: 400px;
-  width: 200px;
+  width: 220px;
 }
 
 .PostCardText {
   flex-basis: 50%;
-  padding-left: 20px;
-  padding-bottom: 1rem;
+  padding-left: 1rem;
+  margin: 10px 0;
   max-width: 400px;
-  width: 200px;
+  overflow-y: auto;
+  width: 220px;
 }
 
 .background-card,
@@ -147,7 +149,7 @@ a {
   height: calc(500px - 60px);
   position: relative;
   left: 0.7rem;
-  margin-bottom: 11rem;
+  margin-bottom: 15rem;
   width: 290px;
 }
 
@@ -170,9 +172,12 @@ a {
 }
 
 .dashboard-heading,
-.post-header,
 .username {
   margin-bottom: 3rem;
+}
+
+.post-header {
+  margin-bottom: 5rem;
 }
 
 .view-post {
@@ -239,11 +244,12 @@ a {
   }
 
   .reviews {
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(2, 520px);
-    justify-items: center;
-    margin-top: 2rem;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem auto 0;
+    width: 70%;
   }
 
   .ReviewPage {
