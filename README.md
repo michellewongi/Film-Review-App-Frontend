@@ -1,7 +1,7 @@
 # Table of contents
 
+- [Routes](#routes)
 - [Overview](#overview)
-  - [Routes](#routes)
   - [Features](#features)
   - [Screenshot](#screenshot)
   - [Links](#links)
@@ -9,29 +9,29 @@
   - [Built with](#built-with)
 - [Author](#author)
 
-## Overview
+## Routes
 
-### Routes
-
-#### /
+### /
 
 - Dashboard where users can view all posts from all users
 
-#### /login
+### /login
 
 - Login page
 
-#### /create
+### /create
 
 - Sign up page
 
-#### /review/:id
+### /review/:id
 
 - Single review with post id
 
-#### /user/:uid
+### /user/:uid
 
 - User's profile page with user id
+
+## Overview
 
 ### Features
 
