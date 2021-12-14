@@ -35,7 +35,7 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
   );
   return (
     <div className="PageWrapper">
-      <h1>Login</h1>
+      <h1 className="login-heading">Login</h1>
       <LoginForm loginUser={loginUser} />
     </div>
   );
