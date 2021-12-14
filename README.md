@@ -63,6 +63,7 @@ Users should be able to:
 - Node.js
 - Express.js
 - Firebase
+- REST API
 
 # Author
 
