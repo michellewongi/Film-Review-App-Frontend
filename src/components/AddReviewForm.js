@@ -2,9 +2,9 @@ import React from "react";
 
 function AddReviewForm({ submitReview }) {
   return (
-    <div className="Form">
+    <div className="Form hidden">
       <h2>Add Review Post</h2>
-      <form onSubmit={(e) => submitReview(e)}>
+      <form id="write-form" onSubmit={(e) => submitReview(e)}>
         <label htmlFor="imageSrc">Image Src</label>
         <input type="text" name="imageSrc" id="imageSrc" />
         <label htmlFor="postMessage">Post Message</label>

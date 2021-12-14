@@ -1,10 +1,22 @@
 import React from "react";
 
 function FilmButton({ result, onImageChange }) {
+  function toggle() {
+    const form = document.querySelector(".Form");
+    const films = document.querySelector(".FilmList");
+    if (form.classList.contains("hidden")) {
+      form.classList.remove("hidden");
+      films.setAttribute("style", "display: none !important");
+    }
+  }
+
   return (
     <button
       className="singleFilmCards"
-      onClick={() => onImageChange(result.image)}
+      onClick={() => {
+        onImageChange(result.image);
+        toggle();
+      }}
     >
       <div className="film-wrapper">
         <img src={result.image} />
