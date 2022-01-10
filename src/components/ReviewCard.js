@@ -12,16 +12,18 @@ function ReviewCard({ post }) {
           <img src={post.imageSrc} alt="Film Poster" />
         </div>
         <div className="PostCardText">
-          <p>{previewText}</p>
-          <p>
-            Posted by:{" "}
-            <a className="postedBy" href={`/user/${post.userId}`}>
-              {post.displayName}
-            </a>
-          </p>
-          <p className="view-post">
-            <a href={`/review/${post.id}`}>View Post </a>
-          </p>
+          <div>
+            <p>{previewText}</p>
+            <p>
+              Posted by:{" "}
+              <a className="postedBy" href={`/user/${post.userId}`}>
+                {post.displayName}
+              </a>
+            </p>
+            <p className="view-post">
+              <a href={`/review/${post.id}`}>View Post </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

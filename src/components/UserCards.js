@@ -13,9 +13,11 @@ function UserCard({ user }) {
           `<img alt="Film Poster" src="${user.posts[`${i}`].imageSrc}"/>` +
           "</div>" +
           `<div class="PostCardText">` +
+          `<div>` +
           "<p>" +
           user.posts[`${i}`].postMessage +
           "</p>" +
+          "</div>" +
           "</div>" +
           "</div>" +
           "</div>" +

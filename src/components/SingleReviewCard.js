@@ -8,13 +8,15 @@ function SingleReviewCard({ post }) {
           <img src={post.imageSrc} alt="Film Poster" />
         </div>
         <div className="PostCardText">
-          <p>{post.postMessage}</p>
-          <p>
-            Posted by:{" "}
-            <a className="postedBy" href={`/user/${post.userId}`}>
-              {post.displayName}
-            </a>
-          </p>
+          <div>
+            <p>{post.postMessage}</p>
+            <p>
+              Posted by:{" "}
+              <a className="postedBy" href={`/user/${post.userId}`}>
+                {post.displayName}
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
