@@ -34,7 +34,7 @@ function UserCard({ user }) {
         dangerouslySetInnerHTML={{
           __html: displayResults({ user }),
         }}
-      ></div>
+       />
     </>
   );
 }
