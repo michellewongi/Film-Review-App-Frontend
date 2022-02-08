@@ -61,7 +61,6 @@ Users should be able to:
 - CSS
 - React.js
 - Node.js
-- Express.js
 - Firebase
 - REST API
 
