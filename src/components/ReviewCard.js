@@ -15,7 +15,7 @@ function ReviewCard({ post }) {
           <div>
             <p>{previewText}</p>
             <p>
-              Posted by:{" "}
+              Posted by:
               <a className="postedBy" href={`/user/${post.userId}`}>
                 {post.displayName}
               </a>

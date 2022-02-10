@@ -14,6 +14,8 @@ function LoginForm({ loginUser }) {
           placeholder="Enter your password"
         />
 
+        <div className="ErrorMsg"></div>
+
         <button className="loginBtn" type="submit">
           Login
         </button>

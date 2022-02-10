@@ -4,6 +4,11 @@ import FilmButton from "./FilmButton";
 function FilmCard({ film }) {
   const handleImageChange = (imageUrl) => {
     document.getElementById("imageSrc").value = imageUrl;
+    document.getElementById("imageSrc").classList.add("hidden");
+    const img = document.createElement("img");
+    img.className = "addReviewImage";
+    img.src = `${imageUrl}`;
+    document.querySelector(".imageSrcImg").appendChild(img);
   };
 
   if (!film) {

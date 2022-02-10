@@ -23,6 +23,16 @@ a {
   font-weight: bold;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #f5b8c1;
+  box-shadow: 0 3px #666;
+  transform: translateY(3px);
+}
+
 .PageWrapper {
   align-items: center;
   display: flex;
@@ -52,7 +62,7 @@ a {
 
 .HeaderWrapper {
   border-bottom: 1px solid black;
-  height: 40px;
+  height: 55px;
 }
 
 nav {
@@ -64,20 +74,28 @@ nav {
 }
 
 .Header nav a {
+  background-color: #fadbe0;
+  border-radius: 10px;
   color: black;
   font-size: 13px;
   font-weight: bold;
+  margin-right: 10px;
+  text-align: center;
   text-decoration: none;
   text-transform: lowercase;
+  padding: 5px 10px;
 }
 
 .Header button {
   background-color: white;
-  border: none;
+  border: 1px solid black;
+  border-radius: 10px;
   font-family: Latin-Modern-Mono;
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
   text-transform: lowercase;
+  padding: 5px 10px;
 }
 
 form {
@@ -91,7 +109,7 @@ form {
 
 .Form input {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   max-width: 400px;
   padding: 10px 9px;
   width: 300px;
@@ -110,8 +128,16 @@ form {
   width: auto;
 }
 
+.ErrorMsg {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
 .postedBy {
   color: #bf218b;
+  font-weight: bold;
 }
 
 .PostCard {
@@ -126,24 +152,28 @@ form {
   right: 1.5rem;
   top: 0.6rem;
   justify-content: center;
-  width: 260px;
+  width: 290px;
 }
 
 .PostCardImage img {
   padding-top: 1rem;
   max-width: 400px;
-  width: 220px;
+  width: 250px;
 }
 
 .PostCardText {
-  border: 1px solid white;
+  border: 2px solid white;
   flex-basis: 50%;
   overflow-y: auto;
-  width: 220px;
+  width: 250px;
 }
 
 .PostCardText div {
   margin: 5px;
+}
+
+.hidden {
+  display: none;
 }
 
 .background-card,
@@ -156,7 +186,7 @@ form {
   position: relative;
   left: 0.7rem;
   margin-bottom: 12rem;
-  width: 290px;
+  width: 320px;
 }
 
 .background-card-user {
@@ -254,7 +284,20 @@ form {
   display: none;
 }
 
-@media only screen and (min-width: 850px) {
+.imageSrcImg {
+  background-color: #fadbe0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.addReviewImage {
+  width: 260px;
+}
+
+@media only screen and (min-width: 950px) {
   .Header nav a {
     font-size: 15px;
   }
@@ -288,7 +331,7 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 2rem auto 0;
-    width: 75%;
+    width: 80%;
   }
 
   .reviews > :only-child {

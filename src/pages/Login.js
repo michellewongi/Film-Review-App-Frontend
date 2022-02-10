@@ -28,6 +28,9 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.warn({ error, errorCode, errorMessage });
+          const errorAlert = document.createElement("p");
+          errorAlert.innerHTML = "Wrong email or password";
+          document.querySelector(".ErrorMsg").appendChild(errorAlert);
           setErrors(errorMessage);
         });
     },

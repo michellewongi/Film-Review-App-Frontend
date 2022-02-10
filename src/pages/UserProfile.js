@@ -11,7 +11,6 @@ const url =
 function UserProfile({ userInformation }) {
   const [userReview, setUserReview] = useState();
   const [currentProfile, setCurrentProfile] = useState();
-  console.log(userInformation);
 
   let { uid } = useParams();
 
@@ -36,9 +35,8 @@ function UserProfile({ userInformation }) {
   return (
     <div className="PageWrapper">
       <div className="username">
-        <strong>User: </strong>{" "}
+        <strong>User: </strong>
         <p className="postedBy">
-          {" "}
           {currentProfile ? currentProfile : userInformation.displayName}
         </p>
       </div>

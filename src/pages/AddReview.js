@@ -26,7 +26,6 @@ function AddReview({ userInformation }) {
       .get(titleURL)
       .then(function (response) {
         setTitle(response.data);
-        console.log(response.data);
       })
       .catch(function (error) {
         console.warn(error);
@@ -46,7 +45,7 @@ function AddReview({ userInformation }) {
 
     axios
       .get(url)
-      .then(function (response) {
+      .then(function () {
         navigate("/", { replace: true });
       })
       .catch(function (error) {
