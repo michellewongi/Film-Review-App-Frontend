@@ -49,9 +49,9 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://thirsty-archimedes-6936ce.netlify.app/]
-- Backend Repo: [https://github.com/mw3981/Film-Review-App-Backend]
-- Backend Live URL: [https://young-retreat-88062.herokuapp.com]
+- Live Site URL: [https://thirsty-archimedes-6936ce.netlify.app/](https://thirsty-archimedes-6936ce.netlify.app/)
+- Backend Repo: [https://github.com/mw3981/Film-Review-App-Backend](https://github.com/mw3981/Film-Review-App-Backend)
+- Backend Live URL: [https://young-retreat-88062.herokuapp.com](https://young-retreat-88062.herokuapp.com)
 
 ## My process
 
@@ -61,7 +61,6 @@ Users should be able to:
 - CSS
 - React.js
 - Node.js
-- Express.js
 - Firebase
 - REST API
 
