@@ -12,6 +12,7 @@ function FilmCard({ film }) {
     document.getElementById("imageSrc").classList.add("hidden");
     const img = document.createElement("img");
     img.className = "addReviewImage";
+    img.alt = "film poster";
     img.src = `${imageUrl}`;
     document.querySelector(".imageSrcImg").appendChild(img);
   };

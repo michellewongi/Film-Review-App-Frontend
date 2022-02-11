@@ -23,7 +23,7 @@ function FilmButton({ result, onImageChange }) {
       }}
     >
       <div className="film-wrapper">
-        <img src={result.image} />
+        <img src={result.image} alt="film poster" />
         <h2>{result.title}</h2>
         <h3>{result.description}</h3>
       </div>
