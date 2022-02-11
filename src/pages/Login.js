@@ -1,9 +1,10 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 // Components
 import LoginForm from "../components/LoginForm";
 
 function Login({ setErrors, setLoggedIn, setUserInformation }) {
+  const [errorMsg, setErrorMsg] = useState();
   const loginUser = useCallback(
     (e) => {
       e.preventDefault();
@@ -28,9 +29,7 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.warn({ error, errorCode, errorMessage });
-          const errorAlert = document.createElement("p");
-          errorAlert.innerHTML = "Wrong email or password";
-          document.querySelector(".ErrorMsg").appendChild(errorAlert);
+          setErrorMsg(errorMessage);
           setErrors(errorMessage);
         });
     },
@@ -40,6 +39,11 @@ function Login({ setErrors, setLoggedIn, setUserInformation }) {
     <div className="PageWrapper">
       <h1 className="login-heading">Login</h1>
       <LoginForm loginUser={loginUser} />
+      {errorMsg ? (
+        <p className="error-message">wrong email or password...</p>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

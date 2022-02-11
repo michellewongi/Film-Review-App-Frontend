@@ -1,7 +1,6 @@
 import React from "react";
 
 function ReviewCard({ post }) {
-  // add a function that adds ... if more than x characters
   let previewText = `${post.postMessage}`;
   previewText = previewText.slice(0, 45);
 

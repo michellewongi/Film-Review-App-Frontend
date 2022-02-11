@@ -17,6 +17,11 @@ function AddReview({ userInformation }) {
 
   const titleURL = `https://imdb-api.com/en/API/SearchMovie/${apiKey}/${titleName}`;
 
+  /**
+   * Function to set state of titleName to user input
+   * @param a The value of the input
+   * @returns set state accordingly
+   */
   function handleChange(e) {
     setTitleName(e.target.value);
   }

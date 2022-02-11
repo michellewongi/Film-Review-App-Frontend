@@ -21,12 +21,6 @@ import "./App.css";
 
 export const baseUrl = `https://young-retreat-88062.herokuapp.com`;
 
-// 1. Signup Page ---> src/pages/CreateUser.js
-// 2. User Profile Page ---> src/pages/UserProfile.js
-// 3. A Dashboard or Landing Page ---> src/pages/Dashboard.js
-// 4. A Way to Write a Post ----> src/components/AddReviewForm.js
-// 5. Login Page ---> src/pages/Login.js
-// 6. A Way to Let the User Sign Out ---> src/App.js
 function App() {
   // Track if user is logged in
   const [loggedIn, setLoggedIn] = useState(false);
@@ -45,9 +39,12 @@ function App() {
     setAppInitialized(true);
   }, []);
 
-  // check to see if user is logged in
-  // user loads page, check their status
-  // set state accordingly
+  /**
+   * Function to check to see if user is logged in
+   * @param a The first number to add
+   * @param b The second number to add
+   * @returns set state accordingly
+   */
   useEffect(() => {
     if (appInitialized) {
       const auth = getAuth();

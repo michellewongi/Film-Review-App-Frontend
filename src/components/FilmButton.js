@@ -1,6 +1,10 @@
 import React from "react";
 
 function FilmButton({ result, onImageChange }) {
+  /**
+   * Function to toggle the display of film results and review form
+   * @returns either list of film results or review form
+   */
   function toggle() {
     const form = document.querySelector(".Form");
     const films = document.querySelector(".FilmList");

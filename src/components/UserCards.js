@@ -1,6 +1,11 @@
 import React from "react";
 
 function UserCard({ user }) {
+  /**
+   * Function to display user's post
+   * @param a user information
+   * @returns display all review posts by this user
+   */
   function displayResults({ user }) {
     let userPosts = [];
     for (let i = 0; i < 40; i++) {
@@ -34,7 +39,7 @@ function UserCard({ user }) {
         dangerouslySetInnerHTML={{
           __html: displayResults({ user }),
         }}
-       />
+      />
     </>
   );
 }
