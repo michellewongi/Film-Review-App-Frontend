@@ -162,9 +162,11 @@ form {
 }
 
 .PostCardText {
+  background-color: #ffffff;
   border: 2px solid white;
   flex-basis: 50%;
   overflow-y: auto;
+  margin-top: 10px;
   width: 250px;
 }
 
